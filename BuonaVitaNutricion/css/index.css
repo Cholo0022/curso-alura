@@ -140,7 +140,17 @@ button:disabled {
   color: red;
 }
 
-.fadeOut{
+.fadeOut {
   opacity: 0;
   transition: 5s;
+}
+
+#filtrar-tabla {
+  width: 200px;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.invisible {
+  display: none;
 }
