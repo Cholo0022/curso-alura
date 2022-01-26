@@ -13,13 +13,18 @@ botonAdicionar.addEventListener("click", function (event) {
     return;
   }
 
-  var tabla = document.querySelector("#tabla-pacientes");
-  tabla.appendChild(pacienteTr);
+  adicionarPacienteEnLaTabla(paciente);
   form.reset();
 
   var mensajesErrores = document.querySelector("#mensajes-errores");
   mensajesErrores.innerHTML = "";
 });
+
+function adicionarPacienteEnLaTabla(paciente) {
+  var pacienteTr = crearPacienteTr(paciente);
+  var tabla = document.querySelector("#tabla-pacientes");
+  tabla.appendChild(pacienteTr);
+}
 
 function capturarDatosPaciente(form) {
   var paciente = {
